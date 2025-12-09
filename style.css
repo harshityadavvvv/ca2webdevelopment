@@ -1,0 +1,204 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #ecf0f1; /* Light Grey Background */
+    color: #333;
+}
+
+main {
+    padding: 30px 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+h1, h2, h3 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+a {
+    text-decoration: none;
+    color: #3498db;
+}
+
+/* --- NAVIGATION BAR (REQUIRED: FLEXBOX FOR LAYOUT) --- */
+
+.navbar {
+    background: #2c3e50; /* Primary Color */
+    color: #fff;
+    padding: 1rem 30px;
+    /* FLEXBOX IMPLEMENTATION */
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.navbar .logo {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex; /* FLEXBOX for the menu items */
+}
+
+.navbar ul li a {
+    color: #fff;
+    padding: 1rem 1.2rem;
+    display: block;
+    transition: background 0.3s, color 0.3s;
+    border-radius: 4px;
+}
+
+.navbar ul li a:hover,
+.navbar ul li .current {
+    background-color: #3498db; /* Accent Color on hover/current */
+    color: #fff;
+}
+
+/* --- BUTTON STYLES --- */
+.btn {
+    display: inline-block;
+    padding: 10px 25px;
+    text-align: center;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+.primary-btn {
+    background: #3498db;
+    color: #fff;
+    border: 2px solid #3498db;
+    margin-top: 15px;
+}
+.primary-btn:hover {
+    background: #2980b9;
+    transform: translateY(-1px);
+}
+
+/* --- HOME SECTION --- */
+#hero {
+    background: #fff;
+    padding: 80px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+#hero h1 {
+    font-size: 2.8rem;
+    margin-bottom: 5px;
+}
+#hero h2 {
+    color: #7f8c8d;
+    font-weight: 300;
+}
+
+/* --- ABOUT ME PAGE (REQUIRED: FLOAT FOR LAYOUT) --- */
+
+.profile-image {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin: 0 30px 15px 0;
+    border-radius: 50%; /* Circular image */
+    border: 5px solid #bdc3c7;
+    /* FLOAT IMPLEMENTATION */
+    float: left; 
+}
+
+/* Clearfix for the container of floated element */
+.profile-section::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* --- SKILLS & PROJECTS (REQUIRED: FLEXBOX FOR CARD ALIGNMENT) --- */
+
+.card-container {
+    margin-top: 25px;
+    /* FLEXBOX IMPLEMENTATION */
+    display: flex;
+    gap: 30px; 
+    flex-wrap: wrap; 
+    justify-content: flex-start; /* Aligns cards neatly to the left */
+}
+
+.skill-card {
+    /* Required Card Styling: Border and Background Color */
+    flex: 1 1 30%; /* Flexible, ensuring 3 cards per row on large screens */
+    min-width: 300px; 
+    padding: 25px;
+    background-color: #ffffff; /* Required: Background color */
+    border: 1px solid #dcdcdc; /* Required: Border */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.skill-card h3 {
+    color: #3498db;
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+}
+
+/* --- CONTACT FORM (REQUIRED: HTML FORMS STYLING) --- */
+
+#contact-area {
+    padding: 30px 0;
+}
+
+.contact-form-layout {
+    max-width: 600px;
+    margin: 20px 0;
+    padding: 30px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #bdc3c7;
+    border-radius: 4px;
+    transition: border-color 0.2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+/* --- FOOTER --- */
+footer {
+    background: #2c3e50;
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 40px;
+    font-size: 0.9rem;
+}
